@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TODO</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="logo">
+          <a href="./index.html">
+          <img src="./Logomark.png" alt="Logo" />
+          <h1>ToDo</h1></a>
+        </div>
+        <div class="notification-settings-profile">
+          <i class="fa-solid fa-gear"></i>
+          <i class="fa-solid fa-bell"></i>
+          <img src="./Profile-picture.png" alt="User-profile_picture" />
+        </div>
+        <div id="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="greeting">
+        <div>
+          <h2>Good <span>morning</span>!</h2>
+          <p>You got some task to do.</p>
+        </div>
+        <button id="create-task-btn">
+          <span><i class="fa-solid fa-plus"></i></span> Create New Task
+        </button>
+      </div>
+      <section class="day-task-body">
+      <div class="day-task">
+        <section>
+          <div>
+            <h3 class="current-month">January <span>2023</span></h3>
+          </div>
+          <div class="days-of-week">
+            <div>Mon <span>2</span></div>
+            <div>Tue <span>3</span></div>
+            <div>Wed <span>4</span></div>
+            <div>Thu <span>5</span></div>
+            <div>Fri <span>6</span></div>
+            <div>Sat <span>7</span></div>
+            <div>Sun <span>8</span></div>
+                        <div>Thu <span>5</span></div>
+            <div>Fri <span>6</span></div>
+            <div>Sat <span>7</span></div>
+            <div>Sun <span>8</span></div>
+                        <div>Thu <span>5</span></div>
+            <div>Fri <span>6</span></div>
+            <div>Sat <span>7</span></div>
+            <div>Sun <span>8</span></div>
+          </div>
+        </section>
+        <section class="tasks-section">
+          <h3>My Tasks</h3>
+          <div class="task-contents" >
+            <div>
+              <div>
+                <input type="checkbox" name="complete" id="complete" />
+                <div>
+                  <h4>Create Wireframe</h4>
+                  <p>10:30 am - 11:00 am</p>
+                </div>
+              </div>
+              <p>Today</p>
+            </div>
+            <div>
+              <div>
+                <input type="checkbox" name="complete" id="complete" />
+                <div>
+                  <h4>Design UI</h4>
+                  <p>11:00 am - 12:00 pm</p>
+                </div>
+              </div>
+              <p>Today</p>
+          </div>
+        </section>
+      </div>
+      <div class="right-side-container">
+      <div class="calendar" id="calendar">
+        <div class="calendar-controls">
+          <button class="prev-month">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <span class="current-month">January 2023</span>
+          <button class="next-month">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Add or Edit Task Section Component -->
+      <div class="add-task-container" id="add-task-container">
+        <div class="add-edit-task">Add Task <span><i class="fa-solid fa-xmark"></i></span></div>
+        <textarea name="task-description" id="task-added"></textarea>
+        <div class="task-time">
+          <p id="task-day"><span><i class="fa-regular fa-calendar"></i></span>Today</p>
+          <p id="task-start-time" class="icon-here"><span><i class="fa-regular fa-clock"></i></span>10:30 am</p>
+          <p id="task-end-time" class="icon-here"><span><i class="fa-regular fa-clock"></i></span>11:30 am</p>
+        </div>
+        <div class="task-reminder">
+          <p id="task-reminder-time"><span>          <i class="fa-solid fa-bell"></i>
+</span> 10 Minute before</p>
+          <i class="fa-solid fa-xmark xmark-sm"></i>
+        </div>
+        <div class="task-buttons">
+          <button id="cancel-btn" class="btn">Cancel</button>
+          <button id="add-btn" class="btn">Add</button>
+        </div>
+      </div>
+
+      <!-- EDIT TASK CONTAINER -->
+             <div class="edit-task-container">
+        <div class="add-edit-task">Edit Task <span><i class="fa-solid fa-xmark"></i></span></div>
+        <textarea name="task-description" id="task-added" placeholder="Create a Wireframe"></textarea>
+        <div class="task-time">
+          <p id="task-day"><span><i class="fa-regular fa-calendar"></i></span>Today</p>
+          <p id="task-start-time" class="icon-here"><span><i class="fa-regular fa-clock"></i></span>10:30 am</p>
+          <p id="task-end-time" class="icon-here"><span><i class="fa-regular fa-clock"></i></span>11:30 am</p>
+        </div>
+        <div class="task-reminder">
+          <p id="task-reminder-time"><span>          <i class="fa-solid fa-bell"></i>
+</span> 10 Minute before</p>
+          <i class="fa-solid fa-xmark xmark-sm"></i>
+        </div>
+        <div class="task-buttons">
+          <button id="cancel-btn" class="btn">Cancel</button>
+          <button id="add-btn" class="btn">Save</button>
+        </div>
+      </div>
+
+      <!-- Task Detailed View -->
+
+      <div class="task-details-container hidden">
+        <i class="fa-solid fa-xmark task-details-xmark"></i>
+        <h4 id="task-title">Create Wireframe</h4>
+        <div>
+          <p><span>
+            <i class="fa-regular fa-calendar task-details-icon"></i>
+          </span>
+          20th January, 2023
+          </p>
+          <p>
+            <span>
+              <i class="fa-regular fa-clock task-details-icon"></i>
+            </span>
+            10:30 - 11:30 AM
+          </p>
+        </div>
+                <div class="task-buttons">
+          <button id="cancel-btn" class="btn">Cancel</button>
+          <button id="add-btn" class="btn">Edit</button>
+        </div>
+      </div>
+      </div>
+      </section>
+    </main>
+
+
+
+    <script src="./script.js"></script>
+  </body>
+</html>
